@@ -1,0 +1,224 @@
+html{
+    box-sizing: border-box;
+    /*Para cuando agreguemos un width a un elemento y luego un padding, este no modifique su tamaño*/
+    font-size: 62.5%; /*Un rem = 10px*/
+    /*
+    Añadir el 62.5% al font-size en la etiqueta html ayuda a que
+    se pueda calcular con mayor precision rl tamaño de los rems, siendo 1
+    el equivalente a 10px
+    */
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+/*Globales*/
+
+body{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/*Grid Areas*/
+body{
+    display: grid;
+    height: 500rem;
+    grid-template-areas: "header"
+                         "nav"
+                         "main";
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: .0fr .01fr 6fr;
+    grid: 4rem;
+}
+
+main{
+    display: grid;
+    grid-template-areas: "header-main"
+                         "mid-main
+                         "second-mid-main"
+                         "metodos-pago"
+                         "ofertas"
+                         "promociones"
+                         "mas-vendido"
+                         "histroial"
+                         "footer";
+    grid-auto-rows: 4.1fr 2fr 2fr 2fr 2fr 2fr;
+    grid-template-columns: repeat(1, 1fr);
+    grid: 4rem;
+}
+
+.header{
+    grid-area: header;
+    background-color: red;
+}
+
+.nav{
+    display: flex;
+    grid-area: nav;
+}
+
+.main{
+    grid-area: main;
+}
+
+/**/
+
+.header-nav-belt{
+    display: grid;
+    background-color: #00446e;
+    grid-template-columns: 1fr 3fr 1fr;
+    max-width: 100%;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+.header-nav-left{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    height: 5rem;
+    background-color: rgba(0, 128, 0, 0.637);
+}
+
+.header-nav-center{
+    display: grid;
+    grid-template-columns: 1fr 3fr .3fr;
+    height: 5rem;
+}
+
+.header-nav-center select{
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    height: 4.5rem;
+}
+
+.header-nav-center input[type="text"]{
+    height: 4.5rem;
+}
+
+.header-nav-center input[type="submit"]{
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    height: 4.5rem;
+}
+
+.header-nav-right{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    height: 5rem;
+    background-color: gray;
+}
+
+/*main*/
+
+/* .header-main-img {
+    grid-row: 1;
+    position: relative;
+}
+
+.header-main-img img{
+    display: block;
+    max-width: 100%;
+}  */
+
+.header-main{
+    background-image: url('../img/principal2.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
+.header-main-content{
+    grid-row:2;
+    display: grid;
+    grid-template-rows: repeat(2, 40rem);
+
+    gap: 2rem;
+    height: 30rem;
+}
+
+.header-main-carrousel{
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+}
+
+.row-left{
+    grid-column: 1;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.row-rigth{
+    grid-column: 3;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.header-main-advices{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+    max-width: 100%;
+    margin: auto 1%;
+}
+
+.content-card-1{
+    display:grid;
+    grid-template-rows: 0fr 1fr;
+    padding-top: 0;
+    padding-left: 1rem;
+    max-width: 75%;
+    background-color: #fcfcfc;
+    height:50rem;
+}
+
+.img-prod-tendency{
+    display: grid;
+    justify-content: space-between;
+    align-items: space-around;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,.5fr);
+}
+
+.promo-prize{
+    display: grid;
+    grid-template-columns: 0fr 1fr;
+    padding-left: 1rem;
+}
+.promo-prize #discount{
+    background-color: red;
+}
+
+.img-prod1 a,
+.img-prod2 a,
+.img-prod3 a,
+.img-prod4 a{ 
+    display: block;
+    max-width: 60%;
+}
+.content-card-2{
+    display:flex;
+    justify-content: center;
+    padding-left: 1rem;
+    background-color:#fcfcfc;
+    height:50rem;
+}
+.content-card-3{
+    display:flex;
+    justify-content: center;
+    padding-left: 1rem;
+    background-color: #fcfcfc;
+    height:50rem;
+}
+.content-card-4{
+    display:flex;
+    justify-content: center;
+    padding-left: 1rem;
+    background-color:#fcfcfc;
+    height:20rem;
+}
