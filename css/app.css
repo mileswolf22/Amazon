@@ -63,6 +63,20 @@ main{
     grid-area: main;
 }
 
+.img-prod1 a,
+.img-prod2 a,
+.img-prod3 a,
+.img-prod4 a{ 
+    display: block;
+    max-width: 60%;
+}
+
+.content-card-1,
+.content-card-2,
+.content-card-3{
+    height: 55rem;
+}
+
 /**/
 
 .header-nav-belt{
@@ -94,19 +108,24 @@ main{
 }
 
 .header-nav-center select{
+    background-color: #dadada;
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
     height: 4.5rem;
+    border: none;
 }
 
 .header-nav-center input[type="text"]{
     height: 4.5rem;
+    border: none;
 }
 
 .header-nav-center input[type="submit"]{
+    background-color: rgb(255, 167, 95);
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
     height: 4.5rem;
+    border: none;
 }
 
 .header-nav-right{
@@ -117,9 +136,30 @@ main{
 }
 
 .nav{
+    display: grid;
+    grid-template-columns: 1fr 10fr 2fr;
+    padding-left: 4rem;
     background-color: #003c5f;
     color:#fff;
 }
+
+.nav-rigth{
+    display: grid;
+    grid-template-columns: repeat(6, 15rem);
+    gap:1rem;
+}
+
+.nav-a{
+    display: flex;
+    justify-content: center;
+}
+
+.nav-back a{
+    height: 2rem;
+    width: 2rem;
+}
+
+
 /*main*/
 
 /* .header-main-img {
@@ -137,13 +177,13 @@ main{
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
+    height: 100rem;
 }
 
 .header-main-content{
     grid-row:2;
     display: grid;
     grid-template-rows: repeat(2, 40rem);
-
     gap: 2rem;
     height: 30rem;
 }
@@ -173,6 +213,7 @@ main{
     gap: 2rem;
     max-width: 100%;
     margin: auto 1%;
+    max-height: 56rem;
 }
 
 .content-card-1{
@@ -182,7 +223,6 @@ main{
     padding-left: 1rem;
     max-width: 100%;
     background-color: #fcfcfc;
-    height:45rem;
 }
 
 .img-prod-tendency{
@@ -260,33 +300,55 @@ main{
     margin: 0;
 }
 
-.img-prod1 a,
-.img-prod2 a,
-.img-prod3 a,
-.img-prod4 a{ 
-    display: block;
-    max-width: 60%;
-}
-
 
 .content-card-2{
     display:grid;
     justify-content: center;
     padding-left: 1rem;
     background-color:#fcfcfc;
-    height:45rem;
 }
+
 .content-card-3{
     display:grid;
     justify-content: center;
     padding-left: 1rem;
     background-color: #fcfcfc;
-    height:45rem;
 }
+
+.aside-cards{
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+
+    gap: 2rem;
+}
+
 .content-card-4{
-    display:grid;
+    grid-row: 1;
     justify-content: center;
     padding-left: 1rem;
     background-color:#fcfcfc;
     height:20rem;
+}
+
+.aside-promo{
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    height: 32rem;
+}
+
+.aside-promo a{
+    max-width: 100%;
+    max-width: 100%;
+}
+
+.mid-main{
+    background-color: #1d2d36;
+    margin-bottom: 2rem;
+}
+
+.second-mid-main{
+    background-color: #0044e6;
+    margin-bottom: 2rem;
 }
